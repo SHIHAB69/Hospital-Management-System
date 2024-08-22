@@ -52,6 +52,7 @@ public class Patient {
        try{
            PreparedStatement preparedStatement = connection.prepareStatement(query);
            ResultSet resultSet = preparedStatement.executeQuery();
+           System.out.println("Patient: ");
            System.out.println("+--------+--------------+--------+---------+");
            System.out.println("| ID     | Name         | Age    | Gender   |");
            System.out.println("+--------+--------------+--------+---------+");
@@ -60,7 +61,7 @@ public class Patient {
                String name = resultSet.getString("name");
                String age = resultSet.getString("age");
                String gender  = resultSet.getString("gender");
-               System.out.printf("|%-12s|%-14s|%-8s|%-10s");
+               System.out.printf("|%-12s|%-14s|%-8s|%-10s\n",id,name,age,gender);
            System.out.println("+--------+--------------+--------+---------+");
            }
 
@@ -85,6 +86,8 @@ public class Patient {
        }catch (SQLException e){
            e.printStackTrace();
        }
+
+       return false;
 
    }
 
