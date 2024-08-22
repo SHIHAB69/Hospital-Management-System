@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Doctor {
     private Connection connection;
 
-    public  Doctor(Connection connection, Scanner scanner) {
+    public  Doctor(Connection connection ) {
         this.connection = connection;
     }
 
