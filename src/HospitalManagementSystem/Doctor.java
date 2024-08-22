@@ -23,13 +23,13 @@ public class Doctor {
             ResultSet resultSet = preparedStatement.executeQuery();
             System.out.println("Doctors: ");
             System.out.println("+--------+--------------+--------+------------------------+");
-            System.out.println("| ID     | Name         | specialixation                  |");
+            System.out.println("| ID     |Name         |specialixation                  |");
             System.out.println("+--------+--------------+--------+------------------------+");
             while (resultSet.next()){
                 int id  = resultSet.getInt("id");
                 String name = resultSet.getString("name");
                 String specialixation  = resultSet.getString("specialixation");
-                System.out.printf("|%-12s|%-14s|%-33s|\n",id,name,specialixation);
+                System.out.printf("|%-10s|%-10s|%-33s|\n",id,name,specialixation);
                 System.out.println("+--------+--------------+--------+---------+");
             }
 
